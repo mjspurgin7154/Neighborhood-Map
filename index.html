@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Washington Wine Country</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_550.css">
+</head>
+<body>
+    <div class="container">
+        <header class="title">
+            <h2 id="main-title">Washington Largest Cities</h2>
+        </header>
+        <div class="content">
+            <div class="box panel">
+                <div class="input">
+                    <input class="input" id="myInput" data-bind="textInput: filter" type="search" placeholder="Search city list.">
+                </div>
+                <div class="list">
+                    <h3>Locations</h3>
+                    <ul data-bind="foreach: filteredItems" id="listView">
+                        <li data-bind="text: name, click: $parent.setLocation"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box myMap" id="map"></div>
+        </div>
+    </div>
+    <script src="js/lib/knockout-3.2.0.js"></script>
+    <script src="js/lib/jquery-3.2.0.min.js"></script>
+    <script src="js/app.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9-CnGVyyvgj5e1Z7ielRwENMDXUVr9v0&v=3&callback=initMap" onerror="googleApiError()">
+    </script>
+</body>
+</html>
+
